@@ -18,7 +18,7 @@ Languages: Java (100%)
 (Add screenshots to the `docs/` folder or the repository root and reference them here.)
 
 Example:
-![Calculator screenshot](docs/screenshot-1.png)
+![Calculator screenshot](docs/ss.jpeg)
 
 ---
 
