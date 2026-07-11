@@ -20,4 +20,5 @@
     <string name="dec">.</string>
     <string name="equ">=</string>
     <string name="app_name">Calculator</string>
+    <string name="div">÷</string>
 </resources>

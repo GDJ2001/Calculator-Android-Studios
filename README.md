@@ -7,11 +7,14 @@ Languages: Java (100%)
 ## Features
 
 - Basic arithmetic: addition, subtraction, multiplication, division
+- Correct operator precedence (× and ÷ are evaluated before + and -)
 - Decimal support
+- Percentage, decimal point, and backspace (⌫) support
 - Clear (C) and All Clear (AC)
 - Simple and responsive UI suitable for phones
 - Handles simple error states (e.g., divide by zero)
 - Preserves current calculation on configuration changes (rotation)
+- Dark/light theming via Material 3
 
 ## Screenshots
 
@@ -40,17 +43,24 @@ Open the project in Android Studio:
 3. Select a target device (emulator or physical device).
 4. Run (Shift+F10 or the Run ▶ button).
 
-## Project structure (typical)
+## Project structure
 
-- app/
-  - src/
-    - main/
-      - java/  — Java source files (activities, view models, etc.)
-      - res/   — layouts, drawables, strings, styles
-      - AndroidManifest.xml
-- gradle/
-- build.gradle (project)
-- app/build.gradle (module)
+- `app/src/main/java/com/example/calculator/MainActivity.java` — UI wiring
+- `app/src/main/java/com/example/calculator/CalculatorEngine.java` — pure calculation logic (no Android dependencies)
+- `app/src/main/res/layout/activity_main.xml` — calculator layout
+- `app/src/test/java/com/example/calculator/CalculatorEngineTest.java` — unit tests
+
+## Building from the command line
+
+```bash
+./gradlew assembleDebug
+```
+
+## Running the tests
+
+```bash
+./gradlew testDebugUnitTest
+```
 
 ## App usage
 
@@ -84,5 +94,5 @@ Please include:
 
 ## Contact
 
-Maintainer: GDJ2001  
+Maintainer: GDJ2001
 Repository: https://github.com/GDJ2001/Calculator-Android-Studios

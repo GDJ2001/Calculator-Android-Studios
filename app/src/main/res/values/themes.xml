@@ -6,4 +6,38 @@
     </style>
 
     <style name="Theme.Calculator" parent="Base.Theme.Calculator" />
+
+    <style name="CalcButton" parent="Widget.Material3.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CalcButton.Number" parent="CalcButton">
+        <item name="android:backgroundTint">@color/N_White</item>
+    </style>
+
+    <style name="CalcButton.Function" parent="CalcButton">
+        <item name="android:backgroundTint">@color/F_White</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="CalcButton.Operator" parent="CalcButton">
+        <item name="android:backgroundTint">@color/F_White</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="CalcButton.Equal" parent="CalcButton">
+        <item name="android:backgroundTint">@color/Equal</item>
+    </style>
+
+    <style name="CalcRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
 </resources>
