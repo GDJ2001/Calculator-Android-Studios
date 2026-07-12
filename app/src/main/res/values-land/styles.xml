@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Landscape uses capsule drawables instead of portrait ovals. -->
+    <style name="CalcButton.Number" parent="CalcButton">
+        <item name="android:background">@drawable/key_number_landscape</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+    <style name="CalcButton.Function" parent="CalcButton">
+        <item name="android:background">@drawable/key_utility_landscape</item>
+        <item name="android:textSize">@dimen/button_function_text_size</item>
+        <item name="android:textColor">@color/btn_text_utility</item>
+    </style>
+    <style name="CalcButton.Operator" parent="CalcButton">
+        <item name="android:background">@drawable/key_operator_landscape</item>
+        <item name="android:textSize">@dimen/button_operator_text_size</item>
+        <item name="android:textColor">@color/btn_text_operator</item>
+    </style>
+    <style name="CalcButton.Equal" parent="CalcButton">
+        <item name="android:background">@drawable/key_equals_landscape</item>
+        <item name="android:textColor">@color/accent_text</item>
+        <item name="android:textSize">@dimen/button_operator_text_size</item>
+    </style>
+</resources>

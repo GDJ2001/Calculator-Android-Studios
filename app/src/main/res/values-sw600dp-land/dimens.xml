@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Landscape tablet / large phone -->
+    <dimen name="calculator_horizontal_padding">28dp</dimen>
+    <dimen name="screen_padding_top">12dp</dimen>
+    <dimen name="screen_padding_bottom">12dp</dimen>
+    <dimen name="landscape_display_height">92dp</dimen>
+    <dimen name="landscape_key_min_height">56dp</dimen>
+    <dimen name="button_min_height">52dp</dimen>
+    <dimen name="key_column_gap">10dp</dimen>
+    <dimen name="key_row_gap">10dp</dimen>
+    <dimen name="display_expression_text_size">32sp</dimen>
+    <dimen name="display_result_text_size">24sp</dimen>
+    <dimen name="button_text_size">22sp</dimen>
+    <dimen name="button_operator_text_size">24sp</dimen>
+    <dimen name="button_function_text_size">20sp</dimen>
+    <dimen name="button_scientific_text_size">16sp</dimen>
+    <dimen name="backspace_icon_size">26dp</dimen>
+</resources>

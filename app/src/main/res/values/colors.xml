@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <resources>
-        <color name="Black">#000000</color>
-        <color name="White">#FFFFFF</color>
-        <color name="F_White">#E5E6EA</color>
-        <color name="N_White">#FEFEFE</color>
-        <color name="Equal">#D2DA0000</color>
-    </resources>
+<resources>
+    <!-- Premium LIGHT theme palette -->
+    <color name="profile_screen_top">#F7F4F8</color>
+    <color name="profile_screen_bottom">#F2EEF4</color>
+    <color name="profile_bg_secondary">#F2EEF4</color>
 
+    <color name="profile_display_primary">#17131B</color>
+    <color name="profile_display_secondary">#625A67</color>
+
+    <color name="profile_key_number">#FFFFFF</color>
+    <color name="profile_key_function">#EBE6EE</color>
+    <color name="profile_key_operator">#E4DEE8</color>
+    <color name="profile_key_scientific">#EEEAF0</color>
+    <color name="profile_key_toggle">#EBE6EE</color>
+
+    <color name="profile_key_text">#17131B</color>
+    <color name="profile_key_text_muted">#4C4551</color>
+    <color name="profile_key_text_utility">#29232D</color>
+    <color name="profile_key_text_operator">#211A25</color>
+
+    <!-- Subtle 1dp tonal outline used in light mode -->
+    <color name="profile_key_stroke">#DDD6E0</color>
+
+    <color name="profile_key_equal">#FF9800</color>
+    <color name="profile_key_equal_hover">#F28F00</color>
+    <color name="profile_key_equal_pressed">#E88900</color>
+    <color name="profile_key_equal_text">#FFFFFF</color>
+
+    <color name="profile_key_number_hover">#F2EEF4</color>
+    <color name="profile_key_number_pressed">#EEE9F0</color>
+    <color name="profile_key_function_hover">#E2DBE6</color>
+    <color name="profile_key_function_pressed">#DCD4E0</color>
+    <color name="profile_key_operator_hover">#D9D1DE</color>
+    <color name="profile_key_operator_pressed">#D3CAD8</color>
+    <color name="profile_key_scientific_pressed">#DED8E2</color>
+
+    <color name="profile_ripple_light">#37373D1A</color>
+    <color name="profile_ripple_dark">#37373D1A</color>
+
+    <color name="profile_focus_ring">#FF980061</color>
+
+    <!-- Semantic aliases -->
+    <color name="bg_primary">@color/profile_screen_bottom</color>
+    <color name="bg_gradient_start">@color/profile_screen_top</color>
+    <color name="bg_gradient_end">@color/profile_screen_bottom</color>
+
+    <color name="display_primary">@color/profile_display_primary</color>
+    <color name="display_secondary">@color/profile_display_secondary</color>
+
+    <color name="btn_text_primary">@color/profile_key_text</color>
+    <color name="btn_text_secondary">@color/profile_key_text_muted</color>
+    <color name="btn_text_utility">@color/profile_key_text_utility</color>
+    <color name="btn_text_operator">@color/profile_key_text_operator</color>
+
+    <color name="accent">@color/profile_key_equal</color>
+    <color name="accent_text">@color/profile_key_equal_text</color>
+
+    <color name="toggle_bg">@color/profile_key_toggle</color>
+    <color name="toggle_text">@color/profile_key_text</color>
+
+    <color name="ripple_light">@color/profile_ripple_light</color>
+    <color name="ripple_dark">@color/profile_ripple_dark</color>
+</resources>

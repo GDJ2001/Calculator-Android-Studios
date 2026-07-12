@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Landscape spacing -->
+    <dimen name="screen_padding">0dp</dimen>
+    <dimen name="screen_padding_horizontal">14dp</dimen>
+    <dimen name="screen_padding_top">8dp</dimen>
+    <dimen name="screen_padding_bottom">8dp</dimen>
+    <dimen name="calculator_horizontal_padding">14dp</dimen>
+    <dimen name="calculator_bottom_padding">8dp</dimen>
+    <dimen name="display_padding_horizontal">16dp</dimen>
+
+    <!-- Keypad gaps -->
+    <dimen name="key_column_gap">7dp</dimen>
+    <dimen name="key_row_gap">7dp</dimen>
+    <dimen name="row_margin_bottom">7dp</dimen>
+    <dimen name="button_margin">3.5dp</dimen>
+
+    <!-- Landscape button sizing (capsule) -->
+    <dimen name="landscape_display_height">76dp</dimen>
+    <dimen name="landscape_key_min_height">48dp</dimen>
+    <dimen name="button_min_height">44dp</dimen>
+    <dimen name="button_elevation">1dp</dimen>
+    <dimen name="button_corner_radius">24dp</dimen>
+
+    <!-- Display text (landscape) -->
+    <dimen name="display_expression_text_size">28sp</dimen>
+    <dimen name="display_result_text_size">20sp</dimen>
+
+    <!-- Button text (landscape) -->
+    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="button_function_text_size">16sp</dimen>
+    <dimen name="button_operator_text_size">20sp</dimen>
+    <dimen name="button_scientific_text_size">14sp</dimen>
+    <dimen name="button_toggle_text_size">13sp</dimen>
+    <dimen name="button_small_text_size">16sp</dimen>
+
+    <dimen name="backspace_icon_size">22dp</dimen>
+</resources>

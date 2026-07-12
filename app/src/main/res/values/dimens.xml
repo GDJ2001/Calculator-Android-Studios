@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Portrait spacing -->
+    <dimen name="screen_padding">18dp</dimen>
+    <dimen name="screen_padding_horizontal">20dp</dimen>
+    <dimen name="screen_padding_top">54dp</dimen>
+    <dimen name="screen_padding_bottom">12dp</dimen>
+    <dimen name="calculator_horizontal_padding">20dp</dimen>
+    <dimen name="calculator_bottom_padding">12dp</dimen>
+    <dimen name="display_padding_horizontal">22dp</dimen>
+
+    <!-- Keypad gaps -->
+    <dimen name="key_column_gap">12dp</dimen>
+    <dimen name="key_row_gap">14dp</dimen>
+    <dimen name="row_margin_bottom">14dp</dimen>
+    <dimen name="button_margin">7dp</dimen>
+
+    <!-- Portrait button sizing (circle) -->
+    <dimen name="portrait_key_size">72dp</dimen>
+    <dimen name="button_min_height">0dp</dimen>
+    <dimen name="button_elevation">2dp</dimen>
+    <dimen name="button_corner_radius">100dp</dimen>
+
+    <!-- Display text -->
+    <dimen name="display_expression_text_size">48sp</dimen>
+    <dimen name="display_result_text_size">31sp</dimen>
+
+    <!-- Button text -->
+    <dimen name="button_text_size">26sp</dimen>
+    <dimen name="button_function_text_size">21sp</dimen>
+    <dimen name="button_operator_text_size">29sp</dimen>
+    <dimen name="button_scientific_text_size">14sp</dimen>
+    <dimen name="button_toggle_text_size">14sp</dimen>
+    <dimen name="button_small_text_size">21sp</dimen>
+
+    <dimen name="backspace_icon_size">27dp</dimen>
+</resources>

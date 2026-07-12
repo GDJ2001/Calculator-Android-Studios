@@ -157,4 +157,122 @@ public class CalculatorEngineTest {
         engine.inputDigit("3");
         assertEquals("6", engine.evaluate());
     }
-}
+
+    @Test
+    public void powerOperator() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputDigit("2");
+        engine.inputOperator('^');
+        engine.inputDigit("10");
+        assertEquals("1024", engine.evaluate());
+    }
+
+    @Test
+    public void parenthesesChangePrecedence() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputParenthesis('(');
+        engine.inputDigit("2");
+        engine.inputOperator('+');
+        engine.inputDigit("3");
+        engine.inputParenthesis(')');
+        engine.inputOperator('×');
+        engine.inputDigit("4");
+        assertEquals("20", engine.evaluate());
+    }
+
+    @Test
+    public void factorial() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputDigit("5");
+        engine.inputFactorial();
+        assertEquals("120", engine.evaluate());
+    }
+
+    @Test
+    public void squareRoot() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputFunction("sqrt");
+        engine.inputDigit("16");
+        engine.inputParenthesis(')');
+        assertEquals("4", engine.evaluate());
+    }
+
+    @Test
+    public void sineOfZero() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputFunction("sin");
+        engine.inputDigit("0");
+        engine.inputParenthesis(')');
+        assertEquals("0", engine.evaluate());
+    }
+
+    @Test
+    public void sineOfNinetyDegrees() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.toggleAngleMode(); // switch to degrees
+        engine.inputFunction("sin");
+        engine.inputDigit("90");
+        engine.inputParenthesis(')');
+        assertEquals("1", engine.evaluate());
+    }
+
+    @Test
+    public void piConstant() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputConstant("π");
+        assertEquals("3.14159265359", engine.evaluate());
+    }
+
+    @Test
+    public void naturalLogOfE() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputFunction("ln");
+        engine.inputConstant("e");
+        engine.inputParenthesis(')');
+        assertEquals("1", engine.evaluate());
+    }
+
+    @Test
+    public void divisionByZeroStillErrors() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputDigit("1");
+        engine.inputOperator('÷');
+        engine.inputDigit("0");
+        assertEquals("Error", engine.evaluate());
+    }
+
+    @Test
+    public void reciprocal() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputDigit("4");
+        engine.inputReciprocal();
+        assertEquals("0.25", engine.evaluate());
+    }
+
+    @Test
+    public void toggleSignPositive() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputDigit("5");
+        engine.toggleSign();
+        assertEquals("-5", engine.getExpression());
+    }
+
+    @Test
+    public void toggleSignNegative() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputDigit("5");
+        engine.toggleSign();
+        engine.toggleSign();
+        assertEquals("5", engine.getExpression());
+    }
+
+    @Test
+    public void reciprocalWorksInExpression() {
+        CalculatorEngine engine = new CalculatorEngine();
+        engine.inputDigit("2");
+        engine.inputOperator('+');
+        engine.inputDigit("4");
+        engine.inputReciprocal();
+        assertEquals("2.25", engine.evaluate());
+    }}
+

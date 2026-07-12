@@ -1,43 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Calculator" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Premium dark surface -->
+        <item name="android:colorBackground">@color/bg_primary</item>
+        <item name="android:windowBackground">@drawable/bg_gradient</item>
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <!-- Neutralised: orange is reserved exclusively for the equals key
+             (applied via its own drawable), never via the theme so a Button
+             can never fall back to an orange fill. -->
+        <item name="colorPrimary">@color/profile_key_operator</item>
+        <item name="colorOnPrimary">@color/btn_text_primary</item>
+        <item name="colorSurface">@color/profile_key_number</item>
+        <item name="colorOnSurface">@color/btn_text_primary</item>
+        <item name="android:textColor">@color/display_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <style name="Theme.Calculator" parent="Base.Theme.Calculator" />
 
-    <style name="CalcButton" parent="Widget.Material3.Button">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="android:textSize">28sp</item>
-        <item name="android:textColor">@color/Black</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="CalcButton.Number" parent="CalcButton">
-        <item name="android:backgroundTint">@color/N_White</item>
-    </style>
-
-    <style name="CalcButton.Function" parent="CalcButton">
-        <item name="android:backgroundTint">@color/F_White</item>
-        <item name="android:textSize">22sp</item>
-    </style>
-
-    <style name="CalcButton.Operator" parent="CalcButton">
-        <item name="android:backgroundTint">@color/F_White</item>
-        <item name="android:textSize">32sp</item>
-    </style>
-
-    <style name="CalcButton.Equal" parent="CalcButton">
-        <item name="android:backgroundTint">@color/Equal</item>
-    </style>
-
-    <style name="CalcRow">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:orientation">horizontal</item>
-        <item name="android:layout_marginBottom">8dp</item>
-    </style>
 </resources>

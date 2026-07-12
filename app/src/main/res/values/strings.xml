@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="ac">ac</string>
+    <string name="ac">AC</string>
     <string name="_2">2</string>
     <string name="_1">1</string>
     <string name="_3">3</string>
@@ -20,5 +20,34 @@
     <string name="dec">.</string>
     <string name="equ">=</string>
     <string name="app_name">Calculator</string>
+    <string name="del_desc">Delete last character</string>
+    <string name="ac_desc">Clear all</string>
+    <string name="per_desc">Percentage</string>
+    <string name="div_desc">Divide</string>
+    <string name="mul_desc">Multiply</string>
+    <string name="sub_desc">Subtract</string>
+    <string name="add_desc">Add</string>
+    <string name="dec_desc">Decimal point</string>
+    <string name="equ_desc">Calculate result</string>
     <string name="div">÷</string>
+    <string name="deg">DEG</string>
+    <string name="rad">RAD</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="asin">sin⁻¹</string>
+    <string name="acos">cos⁻¹</string>
+    <string name="atan">tan⁻¹</string>
+    <string name="ln">ln</string>
+    <string name="log">log</string>
+    <string name="sqrt">√</string>
+    <string name="square">x²</string>
+    <string name="power">^</string>
+    <string name="pi">π</string>
+    <string name="e">e</string>
+    <string name="fact">n!</string>
+    <string name="reciprocal">1/x</string>
+    <string name="sign">±</string>
+    <string name="lparen">(</string>
+    <string name="rparen">)</string>
 </resources>

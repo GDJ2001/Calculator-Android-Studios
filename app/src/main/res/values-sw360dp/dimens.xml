@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">18dp</dimen>
+    <dimen name="screen_padding_horizontal">18dp</dimen>
+    <dimen name="screen_padding_top">58dp</dimen>
+    <dimen name="screen_padding_bottom">20dp</dimen>
+    <dimen name="display_padding_horizontal">2dp</dimen>
+    <dimen name="result_margin_top">24dp</dimen>
+    <dimen name="row_margin_bottom">14dp</dimen>
+    <dimen name="button_margin">7dp</dimen>
+    <dimen name="display_expression_text_size">53sp</dimen>
+    <dimen name="display_result_text_size">36sp</dimen>
+    <dimen name="button_text_size">42sp</dimen>
+    <dimen name="button_function_text_size">28sp</dimen>
+    <dimen name="button_operator_text_size">38sp</dimen>
+    <dimen name="button_scientific_text_size">14sp</dimen>
+    <dimen name="button_toggle_text_size">14sp</dimen>
+    <dimen name="button_small_text_size">22sp</dimen>
+    <dimen name="button_min_height">0dp</dimen>
+    <dimen name="button_corner_radius">100dp</dimen>
+    <dimen name="display_corner_radius">16dp</dimen>
+</resources>

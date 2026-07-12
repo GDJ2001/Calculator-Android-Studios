@@ -1,5 +1,8 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -20,11 +23,45 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+
+            // Release signing is read from environment variables or the
+            // git-ignored local.properties so credentials are never committed.
+            // If neither is provided, the release variant has no signing config
+            // and assembleRelease will fail loudly instead of producing an
+            // unsigned artifact.
+            val localProps = Properties().apply {
+                val file = rootProject.file("local.properties")
+                if (file.exists()) file.inputStream().use { load(it) }
+            }
+            val storeFile = System.getenv("RELEASE_STORE_FILE")
+                ?: localProps.getProperty("storeFile")
+            val keyAlias = System.getenv("RELEASE_KEY_ALIAS")
+                ?: localProps.getProperty("keyAlias")
+            val storePassword = System.getenv("RELEASE_STORE_PASSWORD")
+                ?: localProps.getProperty("storePassword")
+            val keyPassword = System.getenv("RELEASE_KEY_PASSWORD")
+                ?: localProps.getProperty("keyPassword")
+
+            if (storeFile != null && keyAlias != null &&
+                storePassword != null && keyPassword != null) {
+                signingConfig = signingConfigs.create("release") {
+                    this.storeFile = file(storeFile)
+                    this.storePassword = storePassword
+                    this.keyAlias = keyAlias
+                    this.keyPassword = keyPassword
+                }
+            }
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_25
+        targetCompatibility = JavaVersion.VERSION_25
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 

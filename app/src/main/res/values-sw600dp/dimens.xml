@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Portrait tablet / large phone -->
+    <dimen name="screen_padding_horizontal">36dp</dimen>
+    <dimen name="screen_padding_top">72dp</dimen>
+    <dimen name="portrait_key_size">88dp</dimen>
+    <dimen name="display_expression_text_size">56sp</dimen>
+    <dimen name="display_result_text_size">36sp</dimen>
+    <dimen name="button_text_size">30sp</dimen>
+    <dimen name="button_operator_text_size">34sp</dimen>
+    <dimen name="button_function_text_size">24sp</dimen>
+    <dimen name="backspace_icon_size">30dp</dimen>
+</resources>

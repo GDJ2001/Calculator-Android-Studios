@@ -1,7 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Calculator" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Premium dark surface -->
+        <item name="android:colorBackground">@color/bg_primary</item>
+        <item name="android:windowBackground">@drawable/bg_gradient</item>
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <!-- Neutralised: orange is reserved exclusively for the equals key
+             (applied via its own drawable), never via the theme so a Button
+             can never fall back to an orange fill. -->
+        <item name="colorPrimary">@color/profile_key_operator</item>
+        <item name="colorOnPrimary">@color/btn_text_primary</item>
+        <item name="colorSurface">@color/profile_key_number</item>
+        <item name="colorOnSurface">@color/btn_text_primary</item>
+        <item name="android:textColor">@color/display_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
-</resources>
+
+    <style name="Theme.Calculator" parent="Base.Theme.Calculator" /></resources>

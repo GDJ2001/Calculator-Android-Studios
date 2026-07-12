@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base calculator button: flat, tightly centered, custom drawable background.
+         Parent is Widget.AppCompat.Button so no Material backgroundTint overlay
+         is applied on top of each key's own drawable. -->
+    <style name="CalcButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:layout_margin">@dimen/button_margin</item>
+        <item name="android:minHeight">@dimen/button_min_height</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:elevation">@dimen/button_elevation</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textColor">@color/btn_text_primary</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:breakStrategy">simple</item>
+        <item name="android:hyphenationFrequency">none</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="CalcButton.Number" parent="CalcButton">
+        <item name="android:background">@drawable/key_number_portrait</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+
+    <style name="CalcButton.Function" parent="CalcButton">
+        <item name="android:background">@drawable/key_utility_portrait</item>
+        <item name="android:textSize">@dimen/button_function_text_size</item>
+        <item name="android:textColor">@color/btn_text_utility</item>
+    </style>
+
+    <style name="CalcButton.Operator" parent="CalcButton">
+        <item name="android:background">@drawable/key_operator_portrait</item>
+        <item name="android:textSize">@dimen/button_operator_text_size</item>
+        <item name="android:textColor">@color/btn_text_operator</item>
+    </style>
+
+    <style name="CalcButton.Equal" parent="CalcButton">
+        <item name="android:background">@drawable/key_equals_portrait</item>
+        <item name="android:textColor">@color/accent_text</item>
+        <item name="android:textSize">@dimen/button_operator_text_size</item>
+    </style>
+
+    <style name="CalcButton.Scientific" parent="CalcButton">
+        <item name="android:background">@drawable/key_scientific_landscape</item>
+        <item name="android:textSize">@dimen/button_scientific_text_size</item>
+        <item name="android:textColor">@color/btn_text_secondary</item>
+    </style>
+
+    <style name="CalcButton.Toggle" parent="CalcButton">
+        <item name="android:background">@drawable/key_utility_landscape</item>
+        <item name="android:textSize">@dimen/button_toggle_text_size</item>
+        <item name="android:textColor">@color/btn_text_utility</item>
+    </style>
+
+    <!-- Horizontal row of buttons -->
+    <style name="CalcRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/row_margin_bottom</item>
+    </style>
+
+    <style name="CalcRow.Bottom" parent="CalcRow">
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+</resources>

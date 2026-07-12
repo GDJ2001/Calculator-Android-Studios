@@ -1,0 +1,28 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#33FFFFFF">
+    <item android:id="@android:id/mask">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item android:state_pressed="true">
+                <shape android:shape="oval">
+                    <solid android:color="@color/profile_key_equal_pressed" />
+                </shape>
+            </item>
+            <item android:state_hovered="true">
+                <shape android:shape="oval">
+                    <solid android:color="@color/profile_key_equal_hover" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/profile_key_equal" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>
+

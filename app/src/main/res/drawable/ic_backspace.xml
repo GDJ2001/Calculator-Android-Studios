@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:autoMirrored="true">
+    <!-- Backspace key body (filled) -->
+    <path
+        android:fillColor="@color/btn_text_primary"
+        android:pathData="M22 4.5a1.5 1.5 0 0 1 1.5 1.5v12a1.5 1.5 0 0 1 -1.5 1.5H8.8a1.6 1.6 0 0 1 -1.2 -0.55L2.6 13.1a1.7 1.7 0 0 1 0 -2.2l4.9 -5.25A1.6 1.6 0 0 1 8.8 5.1H22Z" />
+    <!-- Cut-out X (button-colored) -->
+    <path
+        android:fillColor="@color/profile_key_function"
+        android:pathData="M14.6 8.9 12.5 11 14.6 13.1 13.3 14.4 11.2 12.3 9.1 14.4 7.8 13.1 9.9 11 7.8 8.9 9.1 7.6 11.2 9.7 13.3 7.6Z" />
+</vector>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:paddingHorizontal="@dimen/calculator_horizontal_padding"
+    android:paddingTop="@dimen/screen_padding_top"
+    android:paddingBottom="@dimen/calculator_bottom_padding"
+    android:background="@drawable/bg_gradient"
+    tools:context=".MainActivity">
+
+    <!-- Compact display across the top -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/landscape_display_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/display_padding_horizontal">
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:textSize="@dimen/display_result_text_size"
+            android:textColor="@color/display_secondary"
+            android:fontFamily="sans-serif"
+            android:fontFeatureSettings="tnum"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeMaxTextSize="@dimen/display_result_text_size"
+            android:autoSizeStepGranularity="1sp"
+            tools:text="246913578" />
+
+        <TextView
+            android:id="@+id/txtExpression"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="end|center_vertical"
+            android:textSize="@dimen/display_expression_text_size"
+            android:textColor="@color/display_primary"
+            android:fontFamily="sans-serif-medium"
+            android:fontFeatureSettings="tnum"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="18sp"
+            android:autoSizeMaxTextSize="@dimen/display_expression_text_size"
+            android:autoSizeStepGranularity="1sp"
+            tools:text="123456789 + 123456789" />
+    </LinearLayout>
+
+    <!-- 8x5 keypad: 4 standard columns + 4 scientific columns -->
+    <LinearLayout
+        android:id="@+id/scientificKeypad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/key_row_gap">
+
+        <!-- Row 1: AC | % | ⌫ | ÷ | RAD | sin | cos | tan -->
+        <LinearLayout style="@style/CalcRow">
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnAC" style="@style/CalcButton.Function" android:text="@string/ac" android:contentDescription="@string/ac_desc" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnPercentage" style="@style/CalcButton.Function" android:text="@string/per" android:contentDescription="@string/per_desc" />
+            <FrameLayout android:id="@+id/btnClear" style="@style/CalcButton.Function" android:contentDescription="@string/del_desc">
+                <ImageView android:layout_width="@dimen/backspace_icon_size" android:layout_height="@dimen/backspace_icon_size" android:layout_gravity="center" android:scaleType="fitCenter" android:src="@drawable/ic_backspace" android:importantForAccessibility="no" />
+            </FrameLayout>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnDivision" style="@style/CalcButton.Operator" android:text="@string/div" android:contentDescription="@string/div_desc" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnRad" style="@style/CalcButton.Toggle" android:text="@string/rad" android:contentDescription="@string/rad" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSin" style="@style/CalcButton.Scientific" android:text="@string/sin" android:contentDescription="@string/sin" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnCos" style="@style/CalcButton.Scientific" android:text="@string/cos" android:contentDescription="@string/cos" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnTan" style="@style/CalcButton.Scientific" android:text="@string/tan" android:contentDescription="@string/tan" />
+        </LinearLayout>
+
+        <!-- Row 2: 7 | 8 | 9 | × | ( | ) | sin⁻¹ | cos⁻¹ -->
+        <LinearLayout style="@style/CalcRow">
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn7" style="@style/CalcButton.Number" android:text="@string/_7" android:contentDescription="@string/_7" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn8" style="@style/CalcButton.Number" android:text="@string/_8" android:contentDescription="@string/_8" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn9" style="@style/CalcButton.Number" android:text="@string/_9" android:contentDescription="@string/_9" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnMultiplication" style="@style/CalcButton.Operator" android:text="@string/mul" android:contentDescription="@string/mul_desc" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnLparen" style="@style/CalcButton.Scientific" android:text="@string/lparen" android:contentDescription="@string/lparen" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnRparen" style="@style/CalcButton.Scientific" android:text="@string/rparen" android:contentDescription="@string/rparen" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnAsin" style="@style/CalcButton.Scientific" android:text="@string/asin" android:contentDescription="@string/asin" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnAcos" style="@style/CalcButton.Scientific" android:text="@string/acos" android:contentDescription="@string/acos" />
+        </LinearLayout>
+
+        <!-- Row 3: 4 | 5 | 6 | − | log | ln | x² | √ -->
+        <LinearLayout style="@style/CalcRow">
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn4" style="@style/CalcButton.Number" android:text="@string/_4" android:contentDescription="@string/_4" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn5" style="@style/CalcButton.Number" android:text="@string/_5" android:contentDescription="@string/_5" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn6" style="@style/CalcButton.Number" android:text="@string/_6" android:contentDescription="@string/_6" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSubtraction" style="@style/CalcButton.Operator" android:text="@string/sub" android:contentDescription="@string/sub_desc" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnLog" style="@style/CalcButton.Scientific" android:text="@string/log" android:contentDescription="@string/log" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnLn" style="@style/CalcButton.Scientific" android:text="@string/ln" android:contentDescription="@string/ln" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSquare" style="@style/CalcButton.Scientific" android:text="@string/square" android:contentDescription="@string/square" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSqrt" style="@style/CalcButton.Scientific" android:text="@string/sqrt" android:contentDescription="@string/sqrt" />
+        </LinearLayout>
+
+        <!-- Row 4: 1 | 2 | 3 | + | π | e | xʸ | 1/x -->
+        <LinearLayout style="@style/CalcRow">
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn1" style="@style/CalcButton.Number" android:text="@string/_1" android:contentDescription="@string/_1" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn2" style="@style/CalcButton.Number" android:text="@string/_2" android:contentDescription="@string/_2" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn3" style="@style/CalcButton.Number" android:text="@string/_3" android:contentDescription="@string/_3" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnAddition" style="@style/CalcButton.Operator" android:text="@string/add" android:contentDescription="@string/add_desc" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnPi" style="@style/CalcButton.Scientific" android:text="@string/pi" android:contentDescription="@string/pi" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnE" style="@style/CalcButton.Scientific" android:text="@string/e" android:contentDescription="@string/e" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnPower" style="@style/CalcButton.Scientific" android:text="@string/power" android:contentDescription="@string/power" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnReciprocal" style="@style/CalcButton.Scientific" android:text="@string/reciprocal" android:contentDescription="@string/reciprocal" />
+        </LinearLayout>
+
+        <!-- Row 5: 00 | 0 | . | = | ± | ! | tan⁻¹ | (extra) -->
+        <LinearLayout style="@style/CalcRow.Bottom">
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn00" style="@style/CalcButton.Number" android:text="@string/_00" android:contentDescription="@string/_00" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn0" style="@style/CalcButton.Number" android:text="@string/_0" android:contentDescription="@string/_0" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnDecimal" style="@style/CalcButton.Number" android:text="@string/dec" android:contentDescription="@string/dec_desc" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnEqual" style="@style/CalcButton.Equal" android:text="@string/equ" android:contentDescription="@string/equ_desc" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSign" style="@style/CalcButton.Scientific" android:text="@string/sign" android:contentDescription="@string/sign" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnFact" style="@style/CalcButton.Scientific" android:text="@string/fact" android:contentDescription="@string/fact" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnAtan" style="@style/CalcButton.Scientific" android:text="@string/atan" android:contentDescription="@string/atan" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnParen" style="@style/CalcButton.Scientific" android:text="@string/lparen" android:contentDescription="@string/lparen" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
