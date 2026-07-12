@@ -34,4 +34,11 @@
     <dimen name="button_small_text_size">21sp</dimen>
 
     <dimen name="backspace_icon_size">27dp</dimen>
+
+    <!-- Base declarations for dimens also defined in qualified folders.
+         Required so the resource is always resolvable (MissingDefaultResource). -->
+    <dimen name="landscape_display_height">76dp</dimen>
+    <dimen name="landscape_key_min_height">48dp</dimen>
+    <dimen name="result_margin_top">24dp</dimen>
+    <dimen name="display_corner_radius">100dp</dimen>
 </resources>
