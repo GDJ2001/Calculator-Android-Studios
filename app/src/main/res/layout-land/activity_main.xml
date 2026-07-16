@@ -117,7 +117,7 @@
             <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnReciprocal" style="@style/CalcButton.Scientific" android:text="@string/reciprocal" android:contentDescription="@string/reciprocal" />
         </LinearLayout>
 
-        <!-- Row 5: 00 | 0 | . | = | ± | ! | tan⁻¹ | (extra) -->
+        <!-- Row 5: 00 | 0 | . | = | ± | ! | tan⁻¹ | ) -->
         <LinearLayout style="@style/CalcRow.Bottom">
             <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn00" style="@style/CalcButton.Number" android:text="@string/_00" android:contentDescription="@string/_00" />
             <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn0" style="@style/CalcButton.Number" android:text="@string/_0" android:contentDescription="@string/_0" />
@@ -126,7 +126,7 @@
             <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnSign" style="@style/CalcButton.Scientific" android:text="@string/sign" android:contentDescription="@string/sign" />
             <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnFact" style="@style/CalcButton.Scientific" android:text="@string/fact" android:contentDescription="@string/fact" />
             <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnAtan" style="@style/CalcButton.Scientific" android:text="@string/atan" android:contentDescription="@string/atan" />
-            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnParen" style="@style/CalcButton.Scientific" android:text="@string/lparen" android:contentDescription="@string/lparen" />
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnRparen2" style="@style/CalcButton.Scientific" android:text="@string/rparen" android:contentDescription="@string/rparen" />
         </LinearLayout>
     </LinearLayout>
 

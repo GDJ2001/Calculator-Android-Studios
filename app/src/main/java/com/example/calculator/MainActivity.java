@@ -46,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
         // layout, so they are bound only when the device is in landscape.
         if (isLandscape) {
             bindScientificButtons();
+            // Reflect the restored angle mode on the RAD/DEG toggle (color +
+            // label) so it matches the persisted engine state after rotation.
+            Button btnRad = (Button) requireView(R.id.btnRad);
+            boolean radians = engine.isRadians();
+            btnRad.setText(radians ? getString(R.string.rad) : getString(R.string.deg));
+            btnRad.setTextColor(radians
+                    ? getColor(R.color.profile_key_equal)
+                    : getColor(R.color.btn_text_utility));
         }
 
         if (savedInstanceState == null) {
@@ -136,8 +144,8 @@ public class MainActivity extends AppCompatActivity {
             engine.inputParenthesis(')');
             refreshDisplay();
         });
-        requireView(R.id.btnParen).setOnClickListener(v -> {
-            engine.inputParenthesis('(');
+        requireView(R.id.btnRparen2).setOnClickListener(v -> {
+            engine.inputParenthesis(')');
             refreshDisplay();
         });
 
