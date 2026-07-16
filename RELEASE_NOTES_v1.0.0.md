@@ -10,24 +10,19 @@ Calculator 1.0 is the first stable release of the Android calculator.
 - Premium light and dark themes.
 - Calculation state retained when the device rotates.
 - Improved button hierarchy, spacing, readability, and touch targets.
+- Only the equals key uses the permanent orange accent.
 
 ## Calculator Functions
 
-- Addition
-- Subtraction
-- Multiplication
-- Division
+- Addition, subtraction, multiplication, division
 - Percentage
 - Decimal calculations
-- Backspace
-- Clear all
-- Trigonometric operations (sin, cos, tan, sin⁻¹, cos⁻¹, tan⁻¹)
+- Backspace and clear all
+- Trigonometric operations (sin, cos, tan, sin Minus1, cos Minus1, tan Minus1)
 - Logarithmic operations (ln, log)
-- Powers and roots (x², xʸ, √)
-- Constants (π, e)
-- Factorial (n!)
-- Reciprocal (1/x)
-- Sign toggle (±)
+- Powers and roots (x2, x^y, sqrt)
+- Constants (pi, e)
+- Factorial (n!), reciprocal (1/x), sign toggle (PlusMinus)
 - Parentheses
 - RAD/DEG angle mode
 
