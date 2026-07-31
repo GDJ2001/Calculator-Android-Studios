@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/gradle.properties">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/gradle.properties" />
+              <option name="originalContent" value="# Project-wide Gradle settings.&#10;# IDE (e.g. Android Studio) users:&#10;# Gradle settings configured through the IDE *will override*&#10;# any settings specified in this file.&#10;# For more details on how to configure your build environment visit&#10;# http://www.gradle.org/docs/current/userguide/build_environment.html&#10;# Specifies the JVM arguments used for the daemon process.&#10;# The setting is particularly useful for tweaking memory settings.&#10;org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8&#10;# AndroidX package structure to make it clearer which packages are bundled with the&#10;# Android operating system, and which are packaged with your app's APK&#10;# https://developer.android.com/topic/libraries/support-library/androidx-rn&#10;android.useAndroidX=true&#10;# Enables namespacing of each library's R class so that its R class includes only the&#10;# resources declared in the library itself and none from the library's dependencies,&#10;# thereby reducing the size of the R class for that library&#10;android.nonTransitiveRClass=true&#10;&#10;" />
+              <option name="updatedContent" value="# Project-wide Gradle settings.&#13;&#10;# IDE (e.g. Android Studio) users:&#13;&#10;# Gradle settings configured through the IDE *will override*&#13;&#10;# any settings specified in this file.&#13;&#10;# For more details on how to configure your build environment visit&#13;&#10;# http://www.gradle.org/docs/current/userguide/build_environment.html&#13;&#10;# Specifies the JVM arguments used for the daemon process.&#13;&#10;# The setting is particularly useful for tweaking memory settings.&#13;&#10;org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8&#13;&#10;# AndroidX package structure to make it clearer which packages are bundled with the&#13;&#10;# Android operating system, and which are packaged with your app's APK&#13;&#10;# https://developer.android.com/topic/libraries/support-library/androidx-rn&#13;&#10;android.useAndroidX=true&#13;&#10;# Enables namespacing of each library's R class so that its R class includes only the&#13;&#10;# resources declared in the library itself and none from the library's dependencies,&#13;&#10;# thereby reducing the size of the R class for that library&#13;&#10;android.nonTransitiveRClass=true&#13;&#10;&#13;&#10;# Point Gradle's JVM toolchain detection at the installed JDK 25&#13;&#10;org.gradle.java.installations.paths=C:\\Program Files\\Java\\jdk-25&#13;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -76,8 +76,11 @@ public class MainActivity extends AppCompatActivity {
 
         for (int buttonId : numberButtons) {
             Button button = (Button) requireView(buttonId);
-            button.setOnClickListener(v -> engine.inputDigit(button.getText().toString()));
-        }
+                    button.setOnClickListener(v -> {
+                        engine.inputDigit(button.getText().toString());
+                        refreshDisplay();
+                    });
+                }
 
         bindOperator(R.id.btnAddition, '+');
         bindOperator(R.id.btnSubtraction, '-');
